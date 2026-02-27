@@ -1,0 +1,239 @@
+/* 🎨 COLORES MÁGICOS */
+:root {
+    --color-principal: #6c5ce7;    /* Morado bonito */
+    --color-secundario: #00b894;   /* Verde menta */
+    --color-fondo: #f8f9fa;        /* Gris clarito */
+    --color-texto: #2d3436;        /* Casi negro */
+    --color-blanco: #ffffff;
+}
+
+/* 🧹 LIMPIEZA GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* 🎯 ENCABEZADO FIJO (se queda arriba) */
+.encabezado {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--color-blanco);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-principal);
+}
+
+nav a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-principal);
+}
+
+/* 🌟 SECCIÓN HERO (la grande y llamativa) */
+.hero {
+    margin-top: 60px;
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-principal), #a29bfe);
+    color: var(--color-blanco);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: aparecer 1s ease;
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* 🎮 SECCIÓN DE PRODUCTOS */
+.productos {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.productos h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--color-principal);
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* 🃏 TARJETAS DE PRODUCTOS */
+.tarjeta {
+    background: var(--color-blanco);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.imagen-producto {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.tarjeta h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.precio {
+    font-size: 2rem;
+    color: var(--color-principal);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* 🔘 BOTONES */
+.boton-principal {
+    display: inline-block;
+    background: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(0,184,148,0.3);
+}
+
+.boton-principal:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,184,148,0.4);
+}
+
+.boton-comprar {
+    background: var(--color-principal);
+    color: var(--color-blanco);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.boton-comprar:hover {
+    background: #5b4cdb;
+    transform: scale(1.05);
+}
+
+/* 📞 SECCIÓN DE CONTACTO */
+.contacto {
+    background: var(--color-blanco);
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.contacto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-principal);
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: 1rem;
+    border: 2px solid #dfe6e9;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-principal);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* 👇 PIE DE PÁGINA */
+.pie {
+    background: var(--color-texto);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 2rem;
+}
+
+/* 📱 PARA CELULARES (más pequeño) */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .grid-productos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ✨ ANIMACIONES */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
