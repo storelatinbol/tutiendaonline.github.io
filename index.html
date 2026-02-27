@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Tienda Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ENCABEZADO: El nombre de tu tienda -->
+    <header class="encabezado">
+        <div class="logo">🚀 Mi Tienda</div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- HERO: La parte grande y llamativa -->
+    <section id="inicio" class="hero">
+        <h1>¡Bienvenido a la Mejor Tienda!</h1>
+        <p>Cosas increíbles a precios increíbles</p>
+        <a href="#productos" class="boton-principal">Ver Productos</a>
+    </section>
+
+    <!-- PRODUCTOS: Lo que vendes -->
+    <section id="productos" class="productos">
+        <h2>Nuestros Productos</h2>
+        
+        <div class="grid-productos">
+            <!-- Producto 1 -->
+            <div class="tarjeta">
+                <div class="imagen-producto">🎮</div>
+                <h3>Videojuego Pro</h3>
+                <p class="precio">$50</p>
+                <button class="boton-comprar">Comprar</button>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="tarjeta">
+                <div class="imagen-producto">🎧</div>
+                <h3>Audífonos Cool</h3>
+                <p class="precio">$30</p>
+                <button class="boton-comprar">Comprar</button>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="tarjeta">
+                <div class="imagen-producto">⌚</div>
+                <h3>Reloj Inteligente</h3>
+                <p class="precio">$80</p>
+                <button class="boton-comprar">Comprar</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO: Cómo te encuentran -->
+    <section id="contacto" class="contacto">
+        <h2>Contáctanos</h2>
+        <form>
+            <input type="text" placeholder="Tu nombre" required>
+            <input type="email" placeholder="Tu email" required>
+            <textarea placeholder="Tu mensaje" required></textarea>
+            <button type="submit" class="boton-principal">Enviar Mensaje</button>
+        </form>
+    </section>
+
+    <!-- PIE DE PÁGINA: Lo de abajo -->
+    <footer class="pie">
+        <p>© 2024 Mi Tienda Genial. Hecho con ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
